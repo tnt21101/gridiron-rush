@@ -41,7 +41,7 @@
 
     let payback = 'about 1 month';
     if (revenue > 0) {
-      const months = 3200 / revenue;
+      const months = 1497 / revenue;
       if (months < 1) payback = 'under 1 month';
       else if (months < 12) payback = `about ${Math.ceil(months)} months`;
       else payback = `${Math.ceil(months)} months`;
