@@ -264,12 +264,18 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     });
   });
 
+  const modal = document.getElementById('upgradeModal');
   const closeModal = document.getElementById('closeModal');
-  if (closeModal) {
-    closeModal.addEventListener('click', () => {
-      document.getElementById('upgradeModal').classList.add('hidden');
+  const hideModal = () => modal && modal.classList.add('hidden');
+  if (closeModal) closeModal.addEventListener('click', hideModal);
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) hideModal();
     });
   }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') hideModal();
+  });
 })();
 
 // ============ Reveal on scroll ============
