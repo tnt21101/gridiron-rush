@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lead Inbox · Lighthouse Web Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: { fontFamily: { sans: ['Inter','sans-serif'], display: ['Fraunces','serif'] } } }
+  };
+</script>
+<style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<header class="bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2 font-display font-bold text-lg">
+      <span class="inline-block w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 grid place-items-center text-white">L</span>
+      Lighthouse · Lead Inbox
+    </a>
+    <a href="index.html" class="text-sm text-slate-600 hover:text-slate-900">← Back to site</a>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-10">
+  <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+    <div>
+      <h1 class="font-display text-4xl font-bold">Leads</h1>
+      <p class="text-slate-600 mt-1">All inquiries from your contact form and audit tool.</p>
+    </div>
+    <div class="flex gap-2">
+      <button id="exportCsv" class="bg-slate-900 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-slate-700 transition">Export CSV</button>
+      <button id="clearAll" class="bg-white border border-slate-200 text-slate-700 text-sm font-semibold px-4 py-2 rounded-lg hover:bg-slate-100 transition">Clear all</button>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-3 gap-4 mb-8">
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+      <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Total leads</div>
+      <div id="statTotal" class="font-display text-3xl font-bold mt-1">0</div>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+      <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold">From contact form</div>
+      <div id="statContact" class="font-display text-3xl font-bold mt-1">0</div>
+    </div>
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+      <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold">From audit tool</div>
+      <div id="statAudit" class="font-display text-3xl font-bold mt-1">0</div>
+    </div>
+  </div>
+
+  <div id="leadsList" class="space-y-3"></div>
+  <div id="emptyState" class="hidden text-center py-20 bg-white rounded-2xl border-2 border-dashed border-slate-200">
+    <div class="text-5xl mb-3">📭</div>
+    <h2 class="font-display font-bold text-xl">No leads yet</h2>
+    <p class="text-slate-600 mt-2">Once visitors submit the contact form or run an audit, they'll appear here.</p>
+  </div>
+
+  <div class="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-xl text-sm text-blue-900">
+    <strong>Note:</strong> Leads are stored in your browser's localStorage for the MVP. To capture leads from real customers, wire the form to a backend (Formspree, Netlify Forms, or your own API). See <code class="bg-white px-1 rounded">script.js</code> comments.
+  </div>
+</main>
+
+<script>
+function load() {
+  const leads = JSON.parse(localStorage.getItem('lighthouse.leads') || '[]');
+  const list = document.getElementById('leadsList');
+  const empty = document.getElementById('emptyState');
+
+  document.getElementById('statTotal').textContent = leads.length;
+  document.getElementById('statContact').textContent = leads.filter(l => l.source !== 'audit').length;
+  document.getElementById('statAudit').textContent = leads.filter(l => l.source === 'audit').length;
+
+  if (!leads.length) {
+    list.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+
+  list.innerHTML = leads.map(l => {
+    const date = new Date(l.receivedAt || l.id).toLocaleString();
+    const isAudit = l.source === 'audit';
+    const tag = isAudit
+      ? '<span class="text-xs font-semibold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Audit</span>'
+      : '<span class="text-xs font-semibold text-blue-800 bg-blue-100 px-2 py-0.5 rounded">Contact</span>';
+
+    if (isAudit) {
+      return `
+      <div class="bg-white p-5 rounded-xl border border-slate-200">
+        <div class="flex flex-wrap justify-between gap-2 mb-2">
+          <div class="font-semibold">${escape(l.email || 'No email provided')}</div>
+          <div class="flex items-center gap-2 text-xs text-slate-500">${tag} ${date}</div>
+        </div>
+        <div class="text-sm text-slate-600">Audited: <a href="${escape(l.auditedUrl)}" class="text-blue-600 hover:underline" target="_blank" rel="noopener">${escape(l.auditedUrl)}</a></div>
+        <div class="text-sm mt-1">Overall score: <strong>${l.overallScore}/100</strong> · Perf ${l.scores?.performance ?? '—'} · SEO ${l.scores?.seo ?? '—'} · A11y ${l.scores?.accessibility ?? '—'} · BP ${l.scores?.bestPractices ?? '—'}</div>
+      </div>`;
+    }
+    return `
+    <div class="bg-white p-5 rounded-xl border border-slate-200">
+      <div class="flex flex-wrap justify-between gap-2 mb-2">
+        <div class="font-semibold">${escape(l.name || 'No name')} <span class="text-slate-400 font-normal">· ${escape(l.email || '')}</span></div>
+        <div class="flex items-center gap-2 text-xs text-slate-500">${tag} ${date}</div>
+      </div>
+      ${l.business ? `<div class="text-sm text-slate-600">${escape(l.business)} ${l.phone ? '· ' + escape(l.phone) : ''}</div>` : ''}
+      ${l.package ? `<div class="text-sm text-slate-600 mt-1">Package: <strong>${escape(l.package)}</strong></div>` : ''}
+      ${l.message ? `<div class="text-sm mt-2 p-3 bg-slate-50 rounded">${escape(l.message)}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function escape(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+document.getElementById('clearAll').addEventListener('click', () => {
+  if (confirm('Delete all leads? This cannot be undone.')) {
+    localStorage.removeItem('lighthouse.leads');
+    load();
+  }
+});
+
+document.getElementById('exportCsv').addEventListener('click', () => {
+  const leads = JSON.parse(localStorage.getItem('lighthouse.leads') || '[]');
+  if (!leads.length) return alert('No leads to export.');
+  const headers = ['receivedAt','source','name','email','phone','business','package','message','auditedUrl','overallScore'];
+  const rows = leads.map(l => headers.map(h => `"${String(l[h] ?? '').replace(/"/g,'""')}"`).join(','));
+  const csv = headers.join(',') + '\n' + rows.join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'leads-' + new Date().toISOString().slice(0,10) + '.csv';
+  a.click();
+});
+
+load();
+</script>
+</body>
+</html>
