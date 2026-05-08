@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lighthouse Web Studio — Websites that bring you customers</title>
-<meta name="description" content="We build fast, beautiful websites for small businesses and prove the ROI. Most clients see their first lead within 30 days." />
+<title>Lighthouse — A web studio for serious small businesses</title>
+<meta name="description" content="Lighthouse is a small studio that designs, builds, and measures websites for service businesses. Fixed scope, fixed price, monthly performance reports." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -18,824 +18,759 @@
           display: ['Fraunces', 'serif'],
         },
         colors: {
-          ink: '#0B1220',
-          brand: {
-            50: '#EEF6FF',
-            100: '#D9ECFF',
-            500: '#2563EB',
-            600: '#1D4ED8',
-            700: '#1E40AF',
-          },
-          accent: '#F59E0B',
+          ink: '#0A0A0A',
+          paper: '#FAFAF8',
+          line: '#E7E5E0',
+          mute: '#737373',
+          accent: '#1B4332',
         },
+        letterSpacing: { tightest: '-0.04em' },
       },
     },
   };
 </script>
 <link rel="stylesheet" href="style.css" />
 </head>
-<body class="font-sans text-ink bg-white antialiased">
+<body class="font-sans text-ink bg-paper antialiased">
 
 <!-- ======== NAV ======== -->
-<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/80 border-b border-slate-100">
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2 font-display font-bold text-lg">
-      <span class="inline-block w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 grid place-items-center text-white">L</span>
+<header class="fixed top-0 inset-x-0 z-50 bg-paper/80 backdrop-blur border-b border-line/60">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5 text-[15px] font-semibold tracking-tight">
+      <span class="inline-block w-6 h-6 rounded-sm bg-ink"></span>
       Lighthouse
     </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-      <a href="#services" class="hover:text-ink">Services</a>
-      <a href="#process" class="hover:text-ink">Process</a>
-      <a href="#work" class="hover:text-ink">Work</a>
-      <a href="#audit" class="hover:text-ink">Free Audit</a>
-      <a href="#roi" class="hover:text-ink">ROI</a>
-      <a href="#pricing" class="hover:text-ink">Pricing</a>
+    <nav class="hidden md:flex items-center gap-9 text-[13px] text-mute">
+      <a href="#services" class="hover:text-ink transition">Services</a>
+      <a href="#work" class="hover:text-ink transition">Work</a>
+      <a href="#process" class="hover:text-ink transition">Process</a>
+      <a href="#audit" class="hover:text-ink transition">Audit</a>
+      <a href="#pricing" class="hover:text-ink transition">Pricing</a>
     </nav>
-    <a href="#contact" class="inline-flex items-center gap-2 bg-ink text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-brand-700 transition">
-      Get a free quote
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    <a href="#contact" class="text-[13px] font-medium border border-ink/15 hover:border-ink hover:bg-ink hover:text-paper px-3.5 py-1.5 rounded-full transition">
+      Start a project
     </a>
   </div>
 </header>
 
 <!-- ======== HERO ======== -->
-<section class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden relative">
-  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 via-white to-white"></div>
-  <div class="absolute -z-10 top-20 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-30 bg-brand-100"></div>
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-600 shadow-sm mb-6">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        Now booking projects for next month
-      </div>
-      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-        Websites that <span class="text-brand-600">bring you customers</span>—not just compliments.
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed">
-        We design and build fast, modern websites for small businesses—then prove the ROI with monthly lead reports. No bloated retainers. No jargon.
-      </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a href="#contact" class="inline-flex items-center justify-center gap-2 bg-ink text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-brand-700 transition shadow-lg shadow-brand-700/20">
-          Start your project
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#audit" class="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 text-ink font-semibold px-6 py-3.5 rounded-lg hover:border-slate-300 transition">
-          Get a free site audit
-        </a>
-      </div>
-      <div class="mt-10 flex items-center gap-6 text-sm text-slate-500">
-        <div class="flex -space-x-2">
-          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 border-2 border-white"></div>
-          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 border-2 border-white"></div>
-          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 border-2 border-white"></div>
-          <div class="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 border-2 border-white"></div>
-        </div>
-        <div>
-          <div class="flex items-center gap-1 text-amber-500">
-            ★★★★★ <span class="text-ink font-semibold ml-1">4.9/5</span>
-          </div>
-          <div>Loved by 40+ small business owners</div>
-        </div>
-      </div>
+<section class="pt-40 pb-24 md:pt-48 md:pb-32">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center gap-2 text-xs text-mute mb-8">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+      <span>Now booking · 2 client slots remaining for next month</span>
     </div>
-
-    <!-- Hero card mock -->
-    <div class="relative">
-      <div class="absolute -inset-4 bg-gradient-to-tr from-brand-200 to-amber-200 rounded-3xl blur-2xl opacity-40"></div>
-      <div class="relative bg-white rounded-2xl shadow-2xl border border-slate-100 p-6">
-        <div class="flex items-center justify-between mb-4">
-          <div>
-            <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Client dashboard</div>
-            <div class="font-display font-bold text-xl">Maple Street Bakery</div>
-          </div>
-          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">Live</span>
-        </div>
-        <div class="grid grid-cols-3 gap-3 mb-5">
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500">Leads (30d)</div>
-            <div class="font-bold text-2xl">47</div>
-            <div class="text-xs text-emerald-600 font-semibold">+34%</div>
-          </div>
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500">Avg. value</div>
-            <div class="font-bold text-2xl">$185</div>
-            <div class="text-xs text-slate-400">per lead</div>
-          </div>
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500">Est. ROI</div>
-            <div class="font-bold text-2xl text-brand-600">8.7×</div>
-            <div class="text-xs text-emerald-600 font-semibold">↑ trending</div>
-          </div>
-        </div>
-        <div class="bg-gradient-to-br from-brand-50 to-white rounded-lg p-4 border border-brand-100">
-          <div class="flex items-end gap-1 h-24">
-            <div class="w-full bg-brand-200 rounded" style="height:30%"></div>
-            <div class="w-full bg-brand-300 rounded" style="height:45%"></div>
-            <div class="w-full bg-brand-400 rounded" style="height:38%"></div>
-            <div class="w-full bg-brand-500 rounded" style="height:62%"></div>
-            <div class="w-full bg-brand-500 rounded" style="height:55%"></div>
-            <div class="w-full bg-brand-600 rounded" style="height:78%"></div>
-            <div class="w-full bg-brand-700 rounded" style="height:95%"></div>
-          </div>
-          <div class="mt-2 text-xs text-slate-500 flex justify-between">
-            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-          </div>
-        </div>
-      </div>
+    <h1 class="font-display text-5xl md:text-7xl lg:text-[88px] leading-[0.98] tracking-tightest font-medium max-w-5xl">
+      A web studio for serious small businesses.
+    </h1>
+    <p class="mt-8 text-lg md:text-xl text-mute max-w-2xl leading-relaxed">
+      Lighthouse designs, builds, and measures websites for service businesses. Fixed scope, fixed price, and a monthly report so you always know what your site is earning.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a href="#contact" class="inline-flex items-center gap-2 bg-ink text-paper text-[14px] font-medium px-5 py-3 rounded-full hover:opacity-90 transition">
+        Start a project
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#audit" class="inline-flex items-center gap-2 text-[14px] font-medium px-5 py-3 rounded-full border border-ink/15 hover:border-ink transition">
+        Run a free audit
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ======== LOGOS ======== -->
-<section class="py-10 border-y border-slate-100 bg-slate-50/50">
-  <div class="max-w-7xl mx-auto px-6">
-    <p class="text-center text-xs uppercase tracking-widest text-slate-500 font-semibold mb-6">Trusted by local businesses across the country</p>
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center text-slate-400 font-display font-bold text-lg">
-      <div>Maple St. Bakery</div>
-      <div>Coastline Plumbing</div>
-      <div>Greene Law Group</div>
+<!-- ======== CLIENTS ======== -->
+<section class="py-12 border-y border-line/60">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="text-[11px] uppercase tracking-[0.2em] text-mute mb-8">Selected clients</p>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-y-6 items-center text-mute font-display text-lg">
+      <div>Maple &amp; Co.</div>
+      <div>Coastline</div>
+      <div>Greene Law</div>
       <div>Aurora Dental</div>
-      <div>Iron &amp; Oak Co.</div>
+      <div>Iron &amp; Oak</div>
     </div>
   </div>
 </section>
 
 <!-- ======== SERVICES ======== -->
-<section id="services" class="py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="max-w-2xl">
-      <div class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">What we do</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Everything your business needs to win online.</h2>
-      <p class="mt-4 text-lg text-slate-600">One studio, end-to-end. We handle the design, the code, the SEO, and the proof that it's working.</p>
-    </div>
-
-    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="group p-7 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition bg-white">
-        <div class="w-12 h-12 rounded-xl bg-brand-50 grid place-items-center text-brand-600 mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl mb-2">Custom website design</h3>
-        <p class="text-slate-600">Hand-crafted designs that match your brand—no cookie-cutter templates. Mobile-first and lightning fast.</p>
+<section id="services" class="py-28 md:py-36">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">01 — Services</div>
       </div>
-
-      <div class="group p-7 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition bg-white">
-        <div class="w-12 h-12 rounded-xl bg-brand-50 grid place-items-center text-brand-600 mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl mb-2">Local SEO</h3>
-        <p class="text-slate-600">Show up first when nearby customers search for what you sell. Google Business Profile setup included.</p>
-      </div>
-
-      <div class="group p-7 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition bg-white">
-        <div class="w-12 h-12 rounded-xl bg-brand-50 grid place-items-center text-brand-600 mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl mb-2">ROI tracking</h3>
-        <p class="text-slate-600">Monthly reports show leads, conversion rates, and dollar value generated. You see exactly what you're paying for.</p>
-      </div>
-
-      <div class="group p-7 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition bg-white">
-        <div class="w-12 h-12 rounded-xl bg-brand-50 grid place-items-center text-brand-600 mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl mb-2">Lead capture &amp; CRM</h3>
-        <p class="text-slate-600">Smart contact forms, instant SMS notifications, and a tidy inbox so no lead falls through the cracks.</p>
-      </div>
-
-      <div class="group p-7 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition bg-white">
-        <div class="w-12 h-12 rounded-xl bg-brand-50 grid place-items-center text-brand-600 mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl mb-2">Hosting &amp; care</h3>
-        <p class="text-slate-600">Secure hosting, daily backups, software updates, and same-day support. Set it and forget it.</p>
-      </div>
-
-      <div class="group p-7 rounded-2xl border border-slate-200 hover:border-brand-500 hover:shadow-xl transition bg-white">
-        <div class="w-12 h-12 rounded-xl bg-brand-50 grid place-items-center text-brand-600 mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58V22"/></svg>
-        </div>
-        <h3 class="font-display font-bold text-xl mb-2">Copywriting</h3>
-        <p class="text-slate-600">Words that sell. We write headlines, service pages, and CTAs designed to turn visitors into customers.</p>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          One studio, end to end. From the first sketch to the monthly report.
+        </h2>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ======== PROCESS ======== -->
-<section id="process" class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="max-w-2xl mb-14">
-      <div class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">How it works</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">From kickoff to live in 14 days.</h2>
-      <p class="mt-4 text-lg text-slate-600">A clear, calm process. You'll always know what's happening and what's next.</p>
-    </div>
-
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="bg-white p-6 rounded-2xl border border-slate-200">
-        <div class="text-5xl font-display font-bold text-brand-600 mb-3">01</div>
-        <h3 class="font-display font-bold text-lg mb-2">Discovery call</h3>
-        <p class="text-slate-600 text-sm">We learn your business, customers, and goals. Free, 30 minutes, no pressure.</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 border-t border-line">
+      <div class="p-8 lg:p-10 border-b border-line lg:border-r">
+        <div class="text-xs text-mute mb-4">01</div>
+        <h3 class="font-display text-2xl mb-3">Strategy &amp; design</h3>
+        <p class="text-[15px] text-mute leading-relaxed">Custom brand-aligned design tailored to your customers and how they buy. No templates. No guesswork.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200">
-        <div class="text-5xl font-display font-bold text-brand-600 mb-3">02</div>
-        <h3 class="font-display font-bold text-lg mb-2">Design &amp; copy</h3>
-        <p class="text-slate-600 text-sm">We deliver a clickable design plus written content. You review and we refine.</p>
+      <div class="p-8 lg:p-10 border-b border-line lg:border-r">
+        <div class="text-xs text-mute mb-4">02</div>
+        <h3 class="font-display text-2xl mb-3">Development</h3>
+        <p class="text-[15px] text-mute leading-relaxed">Fast, accessible, hand-coded sites that load in under a second and rank in search.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200">
-        <div class="text-5xl font-display font-bold text-brand-600 mb-3">03</div>
-        <h3 class="font-display font-bold text-lg mb-2">Build &amp; launch</h3>
-        <p class="text-slate-600 text-sm">We code it, test it on every device, hook up analytics, and push it live.</p>
+      <div class="p-8 lg:p-10 border-b border-line">
+        <div class="text-xs text-mute mb-4">03</div>
+        <h3 class="font-display text-2xl mb-3">Local SEO</h3>
+        <p class="text-[15px] text-mute leading-relaxed">Search-ready content, technical setup, and Google Business Profile optimization for nearby buyers.</p>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-slate-200">
-        <div class="text-5xl font-display font-bold text-brand-600 mb-3">04</div>
-        <h3 class="font-display font-bold text-lg mb-2">Grow &amp; report</h3>
-        <p class="text-slate-600 text-sm">Monthly ROI reports show leads, revenue, and what to improve next.</p>
+      <div class="p-8 lg:p-10 border-b border-line lg:border-b-0 lg:border-r">
+        <div class="text-xs text-mute mb-4">04</div>
+        <h3 class="font-display text-2xl mb-3">Lead capture</h3>
+        <p class="text-[15px] text-mute leading-relaxed">Forms, instant notifications, and a tidy inbox so qualified leads never go cold.</p>
+      </div>
+      <div class="p-8 lg:p-10 border-b border-line lg:border-b-0 lg:border-r">
+        <div class="text-xs text-mute mb-4">05</div>
+        <h3 class="font-display text-2xl mb-3">Hosting &amp; care</h3>
+        <p class="text-[15px] text-mute leading-relaxed">Secure hosting, daily backups, monitoring, and same-day support. Set it and forget it.</p>
+      </div>
+      <div class="p-8 lg:p-10">
+        <div class="text-xs text-mute mb-4">06</div>
+        <h3 class="font-display text-2xl mb-3">Performance reporting</h3>
+        <p class="text-[15px] text-mute leading-relaxed">A one-page report each month: leads, traffic sources, revenue impact, and what to do next.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ======== WORK ======== -->
-<section id="work" class="py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="flex items-end justify-between flex-wrap gap-4 mb-12">
-      <div class="max-w-2xl">
-        <div class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Recent work</div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Real businesses, real results.</h2>
+<section id="work" class="py-28 md:py-36 bg-white border-y border-line">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">02 — Work</div>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          Real businesses. Measurable outcomes.
+        </h2>
       </div>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="group rounded-2xl overflow-hidden bg-gradient-to-br from-rose-100 to-amber-100 aspect-[4/5] relative cursor-pointer">
-        <div class="absolute inset-x-6 top-6">
-          <div class="text-xs font-semibold text-rose-700 bg-white/80 inline-block px-2 py-1 rounded">Bakery</div>
+    <div class="grid md:grid-cols-3 gap-px bg-line border border-line">
+      <article class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="aspect-[4/3] bg-paper border border-line mb-6 grid place-items-center">
+          <span class="font-display text-3xl text-ink/30">Maple &amp; Co.</span>
         </div>
-        <div class="absolute inset-x-6 bottom-6 text-ink">
-          <h3 class="font-display font-bold text-2xl">Maple Street Bakery</h3>
-          <p class="text-sm mt-1">+312% online orders in 90 days</p>
+        <div class="text-xs text-mute mb-2">Bakery · Brooklyn, NY</div>
+        <h3 class="font-display text-2xl mb-3">Maple &amp; Co.</h3>
+        <p class="text-[15px] text-mute leading-relaxed mb-6">A storefront site rebuilt around online ordering and a stronger local search presence.</p>
+        <div class="grid grid-cols-2 gap-4 pt-6 border-t border-line mt-auto">
+          <div>
+            <div class="font-display text-3xl">+312%</div>
+            <div class="text-xs text-mute mt-1">online orders, 90 days</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl">0.6s</div>
+            <div class="text-xs text-mute mt-1">page load time</div>
+          </div>
         </div>
       </article>
 
-      <article class="group rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-cyan-100 aspect-[4/5] relative cursor-pointer">
-        <div class="absolute inset-x-6 top-6">
-          <div class="text-xs font-semibold text-blue-700 bg-white/80 inline-block px-2 py-1 rounded">Plumbing</div>
+      <article class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="aspect-[4/3] bg-paper border border-line mb-6 grid place-items-center">
+          <span class="font-display text-3xl text-ink/30">Coastline</span>
         </div>
-        <div class="absolute inset-x-6 bottom-6 text-ink">
-          <h3 class="font-display font-bold text-2xl">Coastline Plumbing</h3>
-          <p class="text-sm mt-1">$48k pipeline in first month</p>
+        <div class="text-xs text-mute mb-2">Plumbing · Bay Area</div>
+        <h3 class="font-display text-2xl mb-3">Coastline Plumbing</h3>
+        <p class="text-[15px] text-mute leading-relaxed mb-6">A lead-first redesign with click-to-call, service-area pages, and instant SMS alerts.</p>
+        <div class="grid grid-cols-2 gap-4 pt-6 border-t border-line mt-auto">
+          <div>
+            <div class="font-display text-3xl">$48k</div>
+            <div class="text-xs text-mute mt-1">pipeline, month one</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl">94</div>
+            <div class="text-xs text-mute mt-1">qualified leads, 30d</div>
+          </div>
         </div>
       </article>
 
-      <article class="group rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-100 to-teal-100 aspect-[4/5] relative cursor-pointer">
-        <div class="absolute inset-x-6 top-6">
-          <div class="text-xs font-semibold text-emerald-700 bg-white/80 inline-block px-2 py-1 rounded">Law firm</div>
+      <article class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="aspect-[4/3] bg-paper border border-line mb-6 grid place-items-center">
+          <span class="font-display text-3xl text-ink/30">Greene Law</span>
         </div>
-        <div class="absolute inset-x-6 bottom-6 text-ink">
-          <h3 class="font-display font-bold text-2xl">Greene Law Group</h3>
-          <p class="text-sm mt-1">Doubled qualified consultations</p>
+        <div class="text-xs text-mute mb-2">Law firm · Austin, TX</div>
+        <h3 class="font-display text-2xl mb-3">Greene Law Group</h3>
+        <p class="text-[15px] text-mute leading-relaxed mb-6">A measured, trust-driven redesign with practice-area pages built for organic search.</p>
+        <div class="grid grid-cols-2 gap-4 pt-6 border-t border-line mt-auto">
+          <div>
+            <div class="font-display text-3xl">2.1×</div>
+            <div class="text-xs text-mute mt-1">qualified consultations</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl">#1</div>
+            <div class="text-xs text-mute mt-1">for 12 target keywords</div>
+          </div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ======== FREE AUDIT TOOL ======== -->
-<section id="audit" class="py-24 bg-gradient-to-b from-white via-brand-50/40 to-white">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-200 text-xs font-semibold text-amber-800 mb-4">
-        FREE TOOL · No signup required
+<!-- ======== PROCESS ======== -->
+<section id="process" class="py-28 md:py-36">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">03 — Process</div>
       </div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Is your website costing you customers?</h2>
-      <p class="mt-4 text-lg text-slate-600">Get an instant audit of your site's speed, SEO, accessibility, and lead-readiness. Powered by Google Lighthouse — no fluff.</p>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          A calm, predictable engagement. Live in two weeks.
+        </h2>
+      </div>
+    </div>
+
+    <div class="space-y-px bg-line border-y border-line">
+      <div class="bg-paper grid md:grid-cols-12 gap-6 px-6 py-8 md:py-10 items-baseline">
+        <div class="md:col-span-1 font-display text-3xl text-mute">01</div>
+        <div class="md:col-span-3"><h3 class="font-display text-xl">Discovery</h3></div>
+        <div class="md:col-span-7 text-[15px] text-mute leading-relaxed">A free 30-minute call to understand your business, customers, and goals. We leave with a clear scope and a fixed quote.</div>
+        <div class="md:col-span-1 text-xs text-mute md:text-right">Day 1</div>
+      </div>
+      <div class="bg-paper grid md:grid-cols-12 gap-6 px-6 py-8 md:py-10 items-baseline">
+        <div class="md:col-span-1 font-display text-3xl text-mute">02</div>
+        <div class="md:col-span-3"><h3 class="font-display text-xl">Design &amp; copy</h3></div>
+        <div class="md:col-span-7 text-[15px] text-mute leading-relaxed">A clickable design and finished copy delivered for review. Two rounds of revisions are standard.</div>
+        <div class="md:col-span-1 text-xs text-mute md:text-right">Day 2–6</div>
+      </div>
+      <div class="bg-paper grid md:grid-cols-12 gap-6 px-6 py-8 md:py-10 items-baseline">
+        <div class="md:col-span-1 font-display text-3xl text-mute">03</div>
+        <div class="md:col-span-3"><h3 class="font-display text-xl">Build &amp; launch</h3></div>
+        <div class="md:col-span-7 text-[15px] text-mute leading-relaxed">We code the site, test on every device, configure analytics, and ship to your domain.</div>
+        <div class="md:col-span-1 text-xs text-mute md:text-right">Day 7–13</div>
+      </div>
+      <div class="bg-paper grid md:grid-cols-12 gap-6 px-6 py-8 md:py-10 items-baseline">
+        <div class="md:col-span-1 font-display text-3xl text-mute">04</div>
+        <div class="md:col-span-3"><h3 class="font-display text-xl">Measure &amp; refine</h3></div>
+        <div class="md:col-span-7 text-[15px] text-mute leading-relaxed">A monthly report on leads, traffic, and revenue impact, with one improvement implemented per month.</div>
+        <div class="md:col-span-1 text-xs text-mute md:text-right">Ongoing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FREE AUDIT ======== -->
+<section id="audit" class="py-28 md:py-36 bg-white border-y border-line">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">04 — Free audit</div>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          A 30-second performance audit, on the house.
+        </h2>
+        <p class="mt-6 text-lg text-mute max-w-2xl leading-relaxed">
+          Powered by Google Lighthouse. We measure performance, SEO, accessibility, and best practices, and surface where your site is leaving customers on the table.
+        </p>
+      </div>
     </div>
 
     <!-- Audit input -->
-    <div id="auditIntro" class="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-10">
-      <form id="auditForm" class="space-y-4">
-        <div class="grid md:grid-cols-[1fr_auto] gap-3">
+    <div id="auditIntro" class="max-w-3xl">
+      <form id="auditForm" class="border border-line bg-paper p-6 md:p-8 space-y-5">
+        <div class="grid md:grid-cols-[1fr_auto] gap-3 items-end">
           <div>
-            <label class="block text-sm font-semibold mb-1.5">Your website URL</label>
-            <input id="auditUrl" required type="text" placeholder="example.com" class="w-full px-4 py-3.5 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition text-lg" />
+            <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Your website</label>
+            <input id="auditUrl" required type="text" placeholder="example.com" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/20 focus:border-ink focus:ring-0 outline-none text-lg" />
           </div>
-          <div class="md:self-end">
-            <button id="auditRun" type="submit" class="w-full md:w-auto bg-ink text-white font-semibold px-7 py-3.5 rounded-lg hover:bg-brand-700 transition flex items-center justify-center gap-2 disabled:opacity-60">
-              Run free audit
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          <div>
+            <button id="auditRun" type="submit" class="w-full md:w-auto bg-ink text-paper text-[14px] font-medium px-5 py-3 rounded-full hover:opacity-90 transition disabled:opacity-50">
+              Run audit
             </button>
           </div>
         </div>
         <div>
-          <label class="block text-sm font-semibold mb-1.5">Email <span class="text-slate-400 font-normal">(optional, to send the report)</span></label>
-          <input id="auditEmail" type="email" placeholder="you@business.com" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
+          <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Email (optional)</label>
+          <input id="auditEmail" type="email" placeholder="you@business.com" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/20 focus:border-ink focus:ring-0 outline-none" />
         </div>
-        <div id="auditError" class="hidden text-sm text-rose-600 font-semibold"></div>
-        <div class="text-xs text-slate-500 flex flex-wrap gap-x-5 gap-y-1 pt-2">
-          <span>✓ Real Google Lighthouse data</span>
-          <span>✓ Results in ~30 seconds</span>
-          <span>✓ No credit card</span>
+        <div id="auditError" class="hidden text-sm text-rose-700 font-medium"></div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-mute pt-2">
+          <span>Real Lighthouse data</span>
+          <span>·</span>
+          <span>Results in ~30 seconds</span>
+          <span>·</span>
+          <span>No credit card</span>
         </div>
       </form>
     </div>
 
     <!-- Loading -->
-    <div id="auditLoading" class="hidden max-w-3xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-10 text-center">
-      <div class="w-14 h-14 mx-auto border-4 border-brand-100 border-t-brand-600 rounded-full animate-spin mb-5"></div>
-      <h3 class="font-display font-bold text-2xl">Auditing your site…</h3>
-      <p class="mt-2 text-slate-600">Crawling pages, measuring speed, checking SEO. This usually takes 20–40 seconds.</p>
+    <div id="auditLoading" class="hidden max-w-3xl border border-line bg-paper p-12 text-center">
+      <div class="w-10 h-10 mx-auto border-2 border-ink/10 border-t-ink rounded-full animate-spin mb-5"></div>
+      <h3 class="font-display text-2xl">Auditing your site</h3>
+      <p class="mt-2 text-mute text-[15px]">Crawling pages, measuring speed, checking SEO. Usually 20–40 seconds.</p>
     </div>
 
     <!-- Results -->
-    <div id="auditResults" class="hidden max-w-5xl mx-auto space-y-6">
-      <!-- Overall -->
-      <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-10">
-        <div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+    <div id="auditResults" class="hidden space-y-px">
+      <!-- Header -->
+      <div class="bg-paper border border-line p-8 lg:p-10">
+        <div class="flex flex-wrap items-baseline justify-between gap-4 mb-8 pb-6 border-b border-line">
           <div>
-            <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Audit results for</div>
-            <div id="auditedUrl" class="font-display font-bold text-xl break-all"></div>
-            <div id="simulatedBadge" class="hidden text-xs text-amber-700 bg-amber-50 inline-block px-2 py-0.5 rounded mt-1">⚠ Live audit unavailable — showing estimated scores</div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute mb-1">Audit for</div>
+            <div id="auditedUrl" class="font-display text-2xl break-all"></div>
+            <div id="simulatedBadge" class="hidden text-xs text-mute mt-2">Live audit unavailable — showing estimated scores</div>
           </div>
           <div class="text-right">
-            <div id="overallVerdict" class="font-display font-bold text-2xl text-amber-600">—</div>
-            <div class="text-xs text-slate-500">Overall verdict</div>
+            <div id="overallVerdict" class="font-display text-2xl">—</div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute mt-1">Verdict</div>
           </div>
         </div>
 
-        <div class="grid md:grid-cols-[auto_1fr] gap-8 items-center mt-6">
-          <div class="relative w-44 h-44 mx-auto">
+        <div class="grid md:grid-cols-[auto_1fr] gap-12 items-center">
+          <div class="relative w-44 h-44 mx-auto md:mx-0">
             <svg viewBox="0 0 100 100" class="w-full h-full">
-              <circle cx="50" cy="50" r="45" fill="none" stroke-width="8" class="gauge-track"/>
-              <circle id="gOverall" cx="50" cy="50" r="45" fill="none" stroke-width="8" stroke-linecap="round" stroke="#F59E0B" class="gauge-bar"/>
+              <circle cx="50" cy="50" r="45" fill="none" stroke-width="4" class="gauge-track"/>
+              <circle id="gOverall" cx="50" cy="50" r="45" fill="none" stroke-width="4" stroke-linecap="round" class="gauge-bar"/>
             </svg>
             <div class="absolute inset-0 grid place-items-center">
               <div class="text-center">
-                <div id="overallScore" class="font-display font-bold text-5xl">—</div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider">/100</div>
+                <div id="overallScore" class="font-display text-6xl font-medium">—</div>
+                <div class="text-[10px] uppercase tracking-[0.2em] text-mute mt-1">/ 100</div>
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="text-center">
-              <div class="relative w-20 h-20 mx-auto">
-                <svg viewBox="0 0 100 100" class="w-full h-full">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" class="gauge-track"/>
-                  <circle id="gPerf" cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke-linecap="round" class="gauge-bar"/>
-                </svg>
-                <div class="absolute inset-0 grid place-items-center font-bold" id="perfScore">—</div>
-              </div>
-              <div class="mt-2 text-sm font-semibold">Performance</div>
-            </div>
-            <div class="text-center">
-              <div class="relative w-20 h-20 mx-auto">
-                <svg viewBox="0 0 100 100" class="w-full h-full">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" class="gauge-track"/>
-                  <circle id="gSeo" cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke-linecap="round" class="gauge-bar"/>
-                </svg>
-                <div class="absolute inset-0 grid place-items-center font-bold" id="seoScore">—</div>
-              </div>
-              <div class="mt-2 text-sm font-semibold">SEO</div>
-            </div>
-            <div class="text-center">
-              <div class="relative w-20 h-20 mx-auto">
-                <svg viewBox="0 0 100 100" class="w-full h-full">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" class="gauge-track"/>
-                  <circle id="gA11y" cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke-linecap="round" class="gauge-bar"/>
-                </svg>
-                <div class="absolute inset-0 grid place-items-center font-bold" id="a11yScore">—</div>
-              </div>
-              <div class="mt-2 text-sm font-semibold">Accessibility</div>
-            </div>
-            <div class="text-center">
-              <div class="relative w-20 h-20 mx-auto">
-                <svg viewBox="0 0 100 100" class="w-full h-full">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="10" class="gauge-track"/>
-                  <circle id="gBp" cx="50" cy="50" r="45" fill="none" stroke-width="10" stroke-linecap="round" class="gauge-bar"/>
-                </svg>
-                <div class="absolute inset-0 grid place-items-center font-bold" id="bpScore">—</div>
-              </div>
-              <div class="mt-2 text-sm font-semibold">Best Practices</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 pt-6 border-t border-slate-100">
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500 uppercase tracking-wider">Largest paint</div>
-            <div id="mLcp" class="font-bold text-lg mt-1">—</div>
-          </div>
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500 uppercase tracking-wider">First paint</div>
-            <div id="mFcp" class="font-bold text-lg mt-1">—</div>
-          </div>
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500 uppercase tracking-wider">Layout shift</div>
-            <div id="mCls" class="font-bold text-lg mt-1">—</div>
-          </div>
-          <div class="bg-slate-50 rounded-lg p-3">
-            <div class="text-xs text-slate-500 uppercase tracking-wider">Blocking time</div>
-            <div id="mTbt" class="font-bold text-lg mt-1">—</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cost of doing nothing -->
-      <div class="bg-gradient-to-br from-rose-500 to-rose-700 text-white rounded-2xl p-8 md:p-10">
-        <div class="text-sm font-semibold uppercase tracking-wider text-rose-100">⚠ The cost of leaving this</div>
-        <h3 class="font-display text-3xl md:text-4xl font-bold mt-2">You may be losing <span id="lostMonthly">$0</span> every month.</h3>
-        <p class="mt-3 text-rose-100 max-w-2xl">Slow, unfriendly sites turn visitors away. Based on your scores, your site is likely missing real revenue—about <span id="lostAnnual" class="font-bold text-white">$0</span> a year.</p>
-      </div>
-
-      <!-- PAID UPGRADE / paywall -->
-      <div class="bg-white rounded-2xl shadow-xl border-2 border-amber-300 overflow-hidden">
-        <div class="bg-gradient-to-r from-amber-400 to-amber-500 p-6 md:p-8 text-ink">
-          <div class="flex flex-wrap items-center justify-between gap-4">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
-              <div class="text-xs font-bold uppercase tracking-wider">🔒 Premium audit</div>
-              <h3 class="font-display text-3xl md:text-4xl font-bold mt-2">Want the full action plan?</h3>
-              <p class="mt-2 text-ink/80 max-w-xl">A detailed PDF report with prioritized fixes, competitor comparison, expected revenue lift, and a 30-day game plan—delivered in 24 hours.</p>
+              <div class="relative w-16 h-16">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="6" class="gauge-track"/>
+                  <circle id="gPerf" cx="50" cy="50" r="45" fill="none" stroke-width="6" stroke-linecap="round" class="gauge-bar"/>
+                </svg>
+                <div class="absolute inset-0 grid place-items-center font-display text-lg" id="perfScore">—</div>
+              </div>
+              <div class="mt-3 text-xs uppercase tracking-[0.1em] text-mute">Performance</div>
             </div>
-            <div class="text-right">
-              <div class="font-display text-5xl font-bold">$49</div>
-              <div class="text-sm text-ink/70">one-time</div>
+            <div>
+              <div class="relative w-16 h-16">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="6" class="gauge-track"/>
+                  <circle id="gSeo" cx="50" cy="50" r="45" fill="none" stroke-width="6" stroke-linecap="round" class="gauge-bar"/>
+                </svg>
+                <div class="absolute inset-0 grid place-items-center font-display text-lg" id="seoScore">—</div>
+              </div>
+              <div class="mt-3 text-xs uppercase tracking-[0.1em] text-mute">SEO</div>
+            </div>
+            <div>
+              <div class="relative w-16 h-16">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="6" class="gauge-track"/>
+                  <circle id="gA11y" cx="50" cy="50" r="45" fill="none" stroke-width="6" stroke-linecap="round" class="gauge-bar"/>
+                </svg>
+                <div class="absolute inset-0 grid place-items-center font-display text-lg" id="a11yScore">—</div>
+              </div>
+              <div class="mt-3 text-xs uppercase tracking-[0.1em] text-mute">Accessibility</div>
+            </div>
+            <div>
+              <div class="relative w-16 h-16">
+                <svg viewBox="0 0 100 100" class="w-full h-full">
+                  <circle cx="50" cy="50" r="45" fill="none" stroke-width="6" class="gauge-track"/>
+                  <circle id="gBp" cx="50" cy="50" r="45" fill="none" stroke-width="6" stroke-linecap="round" class="gauge-bar"/>
+                </svg>
+                <div class="absolute inset-0 grid place-items-center font-display text-lg" id="bpScore">—</div>
+              </div>
+              <div class="mt-3 text-xs uppercase tracking-[0.1em] text-mute">Best Practices</div>
             </div>
           </div>
         </div>
 
-        <div class="p-6 md:p-8">
-          <div class="grid md:grid-cols-2 gap-x-8 gap-y-3 mb-6">
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Detailed PDF report (15+ pages)</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Top 3 competitor comparison</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Prioritized fix list (high → low impact)</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Estimated revenue lift per fix</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> SEO keyword gap analysis</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> Mobile UX walkthrough</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> 30-min strategy call (worth $200)</div>
-            <div class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span> 100% credited toward any build</div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 pt-8 border-t border-line">
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute">Largest paint</div>
+            <div id="mLcp" class="font-display text-2xl mt-2">—</div>
           </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute">First paint</div>
+            <div id="mFcp" class="font-display text-2xl mt-2">—</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute">Layout shift</div>
+            <div id="mCls" class="font-display text-2xl mt-2">—</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute">Blocking time</div>
+            <div id="mTbt" class="font-display text-2xl mt-2">—</div>
+          </div>
+        </div>
+      </div>
 
-          <!-- Locked preview teaser -->
-          <div class="relative bg-slate-50 rounded-xl p-5 mb-6 overflow-hidden">
-            <div class="locked space-y-2 text-sm">
-              <div class="font-semibold">Top priority fix #1: Enable image compression</div>
-              <div>Estimated impact: <strong>+18 performance points</strong>, ~$420/mo revenue lift.</div>
-              <div>Top priority fix #2: Add structured data for local business…</div>
-              <div>Top priority fix #3: Compress hero video to under 1.5 MB…</div>
-              <div>Competitor "competitor.com" outranks you on 23 keywords…</div>
-            </div>
-            <div class="absolute inset-0 grid place-items-center">
-              <div class="text-center">
-                <div class="inline-flex items-center gap-2 bg-white shadow-lg rounded-full px-4 py-2 border border-slate-200">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                  <span class="text-sm font-semibold">Unlock the full report</span>
-                </div>
-              </div>
-            </div>
+      <!-- Estimate panel -->
+      <div class="bg-ink text-paper p-8 lg:p-10">
+        <div class="grid md:grid-cols-12 gap-6 items-baseline">
+          <div class="md:col-span-7">
+            <div class="text-xs uppercase tracking-[0.15em] text-paper/60 mb-3">Estimated revenue impact</div>
+            <h3 class="font-display text-3xl md:text-4xl tracking-tight">
+              An optimized site could recover an estimated <span id="lostMonthly" class="text-paper">$0</span> per month.
+            </h3>
+            <p class="mt-4 text-[15px] text-paper/70 leading-relaxed max-w-xl">
+              Based on industry benchmarks for a site of this performance level. Annualized: <span id="lostAnnual" class="text-paper">$0</span>.
+            </p>
           </div>
+        </div>
+      </div>
 
-          <div class="flex flex-col sm:flex-row gap-3">
-            <button data-upgrade class="flex-1 bg-ink text-white font-bold py-4 rounded-lg hover:bg-brand-700 transition flex items-center justify-center gap-2 text-lg">
-              Unlock full report — $49
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-            <a href="#contact" class="flex-1 bg-white border-2 border-slate-200 text-ink font-bold py-4 rounded-lg hover:border-slate-300 transition flex items-center justify-center text-lg">
-              Or talk to us first
-            </a>
+      <!-- Premium upsell -->
+      <div class="bg-paper border border-line">
+        <div class="grid md:grid-cols-12 gap-6 p-8 lg:p-10 border-b border-line">
+          <div class="md:col-span-7">
+            <div class="text-xs uppercase tracking-[0.15em] text-mute mb-3">Premium audit · $49</div>
+            <h3 class="font-display text-3xl md:text-4xl tracking-tight">A complete plan for fixing this site.</h3>
+            <p class="mt-4 text-[15px] text-mute leading-relaxed max-w-xl">
+              A 15-page report with prioritized fixes, two competitor benchmarks, expected revenue lift per change, and a 30-minute strategy call. Delivered within 24 hours. Fully credited toward any project.
+            </p>
           </div>
-          <p class="text-xs text-slate-500 text-center mt-4">💸 Money-back guarantee · 100% credited toward any project · Delivered in 24 hours</p>
+          <div class="md:col-span-5">
+            <ul class="space-y-3 text-[14px]">
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>15-page PDF report</span></li>
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>Two competitor benchmarks</span></li>
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>Prioritized fix list with revenue lift</span></li>
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>SEO keyword gap analysis</span></li>
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>Mobile UX walkthrough</span></li>
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>30-minute strategy call</span></li>
+              <li class="flex gap-3 items-baseline"><span class="text-mute">—</span><span>Credit applied to any build</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-8 lg:p-10 flex flex-wrap gap-3 items-center">
+          <button data-upgrade class="inline-flex items-center gap-2 bg-ink text-paper text-[14px] font-medium px-5 py-3 rounded-full hover:opacity-90 transition">
+            Order premium audit — $49
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <a href="#contact" class="inline-flex items-center gap-2 text-[14px] font-medium px-5 py-3 rounded-full border border-ink/15 hover:border-ink transition">
+            Talk to us first
+          </a>
+          <span class="text-xs text-mute ml-auto">Money-back guarantee · Delivered in 24 hours</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Upgrade Modal (shown when Stripe link not configured) -->
-<div id="upgradeModal" class="hidden fixed inset-0 z-50 bg-ink/70 backdrop-blur-sm grid place-items-center p-4">
-  <div class="bg-white rounded-2xl max-w-md w-full p-8 relative shadow-2xl">
-    <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-ink text-2xl leading-none">&times;</button>
-    <div class="w-12 h-12 rounded-full bg-amber-100 grid place-items-center mb-4">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-    </div>
-    <h3 class="font-display font-bold text-2xl">Almost ready to take payment</h3>
-    <p class="mt-3 text-slate-600 text-sm">To accept the $49 fee, paste your Stripe Payment Link into <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">script.js</code> (look for <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">STRIPE_PAYMENT_LINK</code>).</p>
-    <ol class="mt-4 space-y-2 text-sm text-slate-700 list-decimal list-inside">
-      <li>Sign in to <strong>stripe.com</strong> (free)</li>
-      <li>Go to <strong>Payment Links</strong> → New</li>
+<!-- Upgrade Modal -->
+<div id="upgradeModal" class="hidden fixed inset-0 z-50 bg-ink/40 backdrop-blur-sm grid place-items-center p-4">
+  <div class="bg-paper border border-line max-w-md w-full p-8 relative">
+    <button id="closeModal" class="absolute top-4 right-4 text-mute hover:text-ink text-xl leading-none">&times;</button>
+    <div class="text-xs uppercase tracking-[0.15em] text-mute mb-3">Setup needed</div>
+    <h3 class="font-display text-2xl">Connect Stripe to accept payment</h3>
+    <p class="mt-3 text-mute text-[15px] leading-relaxed">Paste your Stripe Payment Link into <code class="bg-white border border-line px-1.5 py-0.5 text-xs">script.js</code> at <code class="bg-white border border-line px-1.5 py-0.5 text-xs">STRIPE_PAYMENT_LINK</code>.</p>
+    <ol class="mt-5 space-y-2 text-[14px] text-mute list-decimal list-inside">
+      <li>Sign in to <strong class="text-ink">stripe.com</strong></li>
+      <li>Open <strong class="text-ink">Payment Links</strong> → New</li>
       <li>Set price to $49, copy the link</li>
-      <li>Paste it into the <code class="bg-slate-100 px-1 rounded text-xs">STRIPE_PAYMENT_LINK</code> variable</li>
+      <li>Paste into <code class="bg-white border border-line px-1 text-xs">STRIPE_PAYMENT_LINK</code></li>
     </ol>
-    <a href="#contact" class="block text-center mt-6 bg-ink text-white font-semibold py-3 rounded-lg hover:bg-brand-700 transition">In the meantime, let's chat</a>
+    <a href="#contact" class="block text-center mt-6 bg-ink text-paper text-[14px] font-medium py-3 rounded-full hover:opacity-90 transition">Get in touch in the meantime</a>
   </div>
 </div>
 
-<!-- ======== ROI CALCULATOR ======== -->
-<section id="roi" class="py-24 bg-ink text-white relative overflow-hidden">
-  <div class="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-brand-600/30 blur-3xl"></div>
-  <div class="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-amber-500/20 blur-3xl"></div>
-  <div class="max-w-7xl mx-auto px-6 relative">
-    <div class="max-w-2xl mb-12">
-      <div class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">ROI calculator</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">See what a better website is worth to you.</h2>
-      <p class="mt-4 text-lg text-slate-300">Slide the inputs to match your business. The numbers update live.</p>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-10 items-start">
-      <div class="space-y-7 bg-white/5 backdrop-blur p-8 rounded-2xl border border-white/10">
-        <div>
-          <div class="flex justify-between mb-2">
-            <label class="font-semibold">Monthly website visitors</label>
-            <span id="visitorsLabel" class="text-amber-400 font-bold">1,000</span>
-          </div>
-          <input type="range" id="visitors" min="100" max="20000" step="100" value="1000" class="w-full accent-amber-400" />
-        </div>
-        <div>
-          <div class="flex justify-between mb-2">
-            <label class="font-semibold">Visitor → lead rate</label>
-            <span id="convLabel" class="text-amber-400 font-bold">3%</span>
-          </div>
-          <input type="range" id="conv" min="1" max="15" step="0.5" value="3" class="w-full accent-amber-400" />
-        </div>
-        <div>
-          <div class="flex justify-between mb-2">
-            <label class="font-semibold">Lead → customer rate</label>
-            <span id="closeLabel" class="text-amber-400 font-bold">25%</span>
-          </div>
-          <input type="range" id="close" min="5" max="80" step="1" value="25" class="w-full accent-amber-400" />
-        </div>
-        <div>
-          <div class="flex justify-between mb-2">
-            <label class="font-semibold">Average customer value</label>
-            <span id="valueLabel" class="text-amber-400 font-bold">$250</span>
-          </div>
-          <input type="range" id="value" min="25" max="5000" step="25" value="250" class="w-full accent-amber-400" />
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 gap-4">
-        <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
-          <div class="text-sm text-slate-400 uppercase tracking-wider">New leads / mo</div>
-          <div id="leadsOut" class="font-display text-5xl font-bold mt-2 text-amber-400">30</div>
-        </div>
-        <div class="bg-white/5 backdrop-blur p-6 rounded-2xl border border-white/10">
-          <div class="text-sm text-slate-400 uppercase tracking-wider">New customers / mo</div>
-          <div id="custOut" class="font-display text-5xl font-bold mt-2 text-amber-400">8</div>
-        </div>
-        <div class="col-span-2 bg-gradient-to-br from-brand-600 to-brand-700 p-8 rounded-2xl border border-white/10">
-          <div class="text-sm text-brand-100 uppercase tracking-wider">Estimated monthly revenue</div>
-          <div id="revOut" class="font-display text-6xl md:text-7xl font-bold mt-2">$1,875</div>
-          <div class="mt-3 text-brand-100">That's <span id="annualOut" class="font-bold text-white">$22,500</span> a year from one website.</div>
-        </div>
-        <div class="col-span-2 bg-amber-500/10 border border-amber-500/30 p-6 rounded-2xl">
-          <div class="text-sm text-amber-300 font-semibold uppercase tracking-wider">Investment vs. return</div>
-          <p class="mt-2 text-slate-200">Most clients invest <span class="font-bold text-white">$1,500–$4,000</span> on a build. Pays itself back in <span id="paybackOut" class="font-bold text-amber-400">about 1 month</span>.</p>
-          <a href="#contact" class="inline-flex mt-4 items-center gap-2 bg-amber-400 text-ink font-semibold px-5 py-2.5 rounded-lg hover:bg-amber-300 transition">
-            Get my custom quote
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
+<!-- ======== TESTIMONIAL ======== -->
+<section class="py-28 md:py-36">
+  <div class="max-w-4xl mx-auto px-6">
+    <blockquote class="font-display text-3xl md:text-4xl leading-[1.2] tracking-tight">
+      "We went from no website to forty-seven leads in our first month. The monthly report makes it impossible to wonder if it's working — I can see it. Best money we've spent on the business."
+    </blockquote>
+    <div class="mt-10 flex items-center gap-4 text-[14px]">
+      <div class="w-10 h-10 rounded-full bg-ink/5 border border-line grid place-items-center text-xs font-medium">SC</div>
+      <div>
+        <div class="font-medium">Sarah Chen</div>
+        <div class="text-mute">Owner · Maple &amp; Co.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======== TESTIMONIAL ======== -->
-<section class="py-24">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <div class="flex justify-center text-amber-400 text-2xl mb-6">★★★★★</div>
-    <blockquote class="font-display text-2xl md:text-3xl leading-relaxed">
-      "We went from no website to 47 leads in our first month. The dashboard makes it impossible to wonder if it's working—I can see it. Best money we've spent on the business."
-    </blockquote>
-    <div class="mt-8 flex items-center justify-center gap-3">
-      <div class="w-12 h-12 rounded-full bg-gradient-to-br from-rose-400 to-amber-400"></div>
-      <div class="text-left">
-        <div class="font-bold">Sarah Chen</div>
-        <div class="text-sm text-slate-500">Owner, Maple Street Bakery</div>
+<!-- ======== ROI ======== -->
+<section id="roi" class="py-28 md:py-36 bg-white border-y border-line">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">05 — ROI calculator</div>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          A clear-eyed view of what a better site is worth.
+        </h2>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-px bg-line border border-line">
+      <div class="bg-paper p-8 lg:p-10 space-y-7">
+        <div>
+          <div class="flex justify-between mb-3 items-baseline">
+            <label class="text-xs uppercase tracking-[0.15em] text-mute">Monthly visitors</label>
+            <span id="visitorsLabel" class="font-display text-xl">1,000</span>
+          </div>
+          <input type="range" id="visitors" min="100" max="20000" step="100" value="1000" class="w-full" />
+        </div>
+        <div>
+          <div class="flex justify-between mb-3 items-baseline">
+            <label class="text-xs uppercase tracking-[0.15em] text-mute">Visitor → lead</label>
+            <span id="convLabel" class="font-display text-xl">3%</span>
+          </div>
+          <input type="range" id="conv" min="1" max="15" step="0.5" value="3" class="w-full" />
+        </div>
+        <div>
+          <div class="flex justify-between mb-3 items-baseline">
+            <label class="text-xs uppercase tracking-[0.15em] text-mute">Lead → customer</label>
+            <span id="closeLabel" class="font-display text-xl">25%</span>
+          </div>
+          <input type="range" id="close" min="5" max="80" step="1" value="25" class="w-full" />
+        </div>
+        <div>
+          <div class="flex justify-between mb-3 items-baseline">
+            <label class="text-xs uppercase tracking-[0.15em] text-mute">Avg. customer value</label>
+            <span id="valueLabel" class="font-display text-xl">$250</span>
+          </div>
+          <input type="range" id="value" min="25" max="5000" step="25" value="250" class="w-full" />
+        </div>
+      </div>
+
+      <div class="bg-paper p-8 lg:p-10">
+        <div class="grid grid-cols-2 gap-6 pb-6 border-b border-line">
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute">Leads / month</div>
+            <div id="leadsOut" class="font-display text-4xl mt-2">30</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute">Customers / month</div>
+            <div id="custOut" class="font-display text-4xl mt-2">8</div>
+          </div>
+        </div>
+        <div class="py-8">
+          <div class="text-xs uppercase tracking-[0.15em] text-mute">Estimated monthly revenue</div>
+          <div id="revOut" class="font-display text-6xl md:text-7xl tracking-tight mt-3">$1,875</div>
+          <div class="mt-3 text-mute text-[15px]">That's <span id="annualOut" class="text-ink font-medium">$22,500</span> per year from one website.</div>
+        </div>
+        <div class="pt-6 border-t border-line text-[14px] text-mute">
+          Most clients invest <span class="text-ink">$1,500–$4,000</span> on a build. Pays back in <span id="paybackOut" class="text-ink">about 1 month</span>.
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ======== PRICING ======== -->
-<section id="pricing" class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="max-w-2xl mb-14">
-      <div class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Pricing</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Simple, fixed-price packages.</h2>
-      <p class="mt-4 text-lg text-slate-600">No mystery hourly bills. Pick the package that fits—we'll quote any custom needs separately.</p>
+<section id="pricing" class="py-28 md:py-36">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-10 mb-16">
+      <div class="md:col-span-4">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">06 — Pricing</div>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          Three packages. Fixed scope, fixed price.
+        </h2>
+      </div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-8 rounded-2xl border border-slate-200">
-        <h3 class="font-display font-bold text-xl">Starter</h3>
-        <div class="mt-4">
-          <span class="font-display text-5xl font-bold">$1,500</span>
-          <span class="text-slate-500">one-time</span>
-        </div>
-        <p class="text-slate-600 mt-3">A polished one-page site to get found and get leads.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> 1-page custom design</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Mobile responsive</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Contact form &amp; email alerts</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Basic SEO + Google Business</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Live in 7 days</li>
+    <div class="grid md:grid-cols-3 gap-px bg-line border border-line">
+      <div class="bg-paper p-8 lg:p-10 flex flex-col">
+        <div class="text-xs uppercase tracking-[0.15em] text-mute mb-3">Starter</div>
+        <div class="font-display text-5xl mb-2">$1,500</div>
+        <div class="text-xs text-mute mb-8">One-time · Live in 7 days</div>
+        <p class="text-[15px] text-mute leading-relaxed mb-8">A polished one-page site to get found and capture leads.</p>
+        <ul class="space-y-2.5 text-[14px] text-ink/80 mb-10">
+          <li class="flex gap-3"><span class="text-mute">—</span> 1-page custom design</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Mobile responsive</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Contact form &amp; alerts</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Basic SEO + GBP</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Live in 7 days</li>
         </ul>
-        <a href="#contact" class="block text-center mt-8 bg-white border-2 border-ink text-ink font-semibold py-3 rounded-lg hover:bg-ink hover:text-white transition">Choose Starter</a>
+        <a href="#contact" class="mt-auto block text-center text-[14px] font-medium py-3 rounded-full border border-ink/15 hover:border-ink transition">Choose Starter</a>
       </div>
 
-      <div class="bg-ink text-white p-8 rounded-2xl border-2 border-brand-500 relative shadow-2xl scale-105">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-ink text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most popular</div>
-        <h3 class="font-display font-bold text-xl">Growth</h3>
-        <div class="mt-4">
-          <span class="font-display text-5xl font-bold">$3,200</span>
-          <span class="text-slate-400">one-time</span>
-        </div>
-        <p class="text-slate-300 mt-3">Multi-page site + ROI dashboard + ongoing care.</p>
-        <ul class="mt-6 space-y-3">
-          <li class="flex gap-2"><span class="text-amber-400">✓</span> Up to 6 pages, custom design</li>
-          <li class="flex gap-2"><span class="text-amber-400">✓</span> Lead dashboard + monthly ROI report</li>
-          <li class="flex gap-2"><span class="text-amber-400">✓</span> Local SEO setup + content</li>
-          <li class="flex gap-2"><span class="text-amber-400">✓</span> Hosting + care plan included (3 mo)</li>
-          <li class="flex gap-2"><span class="text-amber-400">✓</span> Live in 14 days</li>
+      <div class="bg-ink text-paper p-8 lg:p-10 flex flex-col">
+        <div class="text-xs uppercase tracking-[0.15em] text-paper/60 mb-3">Growth · Most popular</div>
+        <div class="font-display text-5xl mb-2">$3,200</div>
+        <div class="text-xs text-paper/60 mb-8">One-time · Live in 14 days</div>
+        <p class="text-[15px] text-paper/70 leading-relaxed mb-8">Multi-page site with performance reporting and care plan included.</p>
+        <ul class="space-y-2.5 text-[14px] text-paper/90 mb-10">
+          <li class="flex gap-3"><span class="text-paper/40">—</span> Up to 6 pages, custom design</li>
+          <li class="flex gap-3"><span class="text-paper/40">—</span> Monthly performance report</li>
+          <li class="flex gap-3"><span class="text-paper/40">—</span> Local SEO + content</li>
+          <li class="flex gap-3"><span class="text-paper/40">—</span> Hosting + care (3 months)</li>
+          <li class="flex gap-3"><span class="text-paper/40">—</span> Live in 14 days</li>
         </ul>
-        <a href="#contact" class="block text-center mt-8 bg-amber-400 text-ink font-semibold py-3 rounded-lg hover:bg-amber-300 transition">Choose Growth</a>
+        <a href="#contact" class="mt-auto block text-center bg-paper text-ink text-[14px] font-medium py-3 rounded-full hover:opacity-90 transition">Choose Growth</a>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl border border-slate-200">
-        <h3 class="font-display font-bold text-xl">Scale</h3>
-        <div class="mt-4">
-          <span class="font-display text-5xl font-bold">$6,500+</span>
-          <span class="text-slate-500">project</span>
-        </div>
-        <p class="text-slate-600 mt-3">Bigger sites with bookings, payments, or custom apps.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Unlimited pages</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Online booking or e-commerce</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Custom integrations (CRM, Stripe)</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Advanced analytics dashboard</li>
-          <li class="flex gap-2"><span class="text-brand-600">✓</span> Dedicated project manager</li>
+      <div class="bg-paper p-8 lg:p-10 flex flex-col">
+        <div class="text-xs uppercase tracking-[0.15em] text-mute mb-3">Scale</div>
+        <div class="font-display text-5xl mb-2">$6,500+</div>
+        <div class="text-xs text-mute mb-8">Project · Custom timeline</div>
+        <p class="text-[15px] text-mute leading-relaxed mb-8">Larger builds with bookings, payments, or custom integrations.</p>
+        <ul class="space-y-2.5 text-[14px] text-ink/80 mb-10">
+          <li class="flex gap-3"><span class="text-mute">—</span> Unlimited pages</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Booking or e-commerce</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> CRM + Stripe integrations</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Advanced analytics</li>
+          <li class="flex gap-3"><span class="text-mute">—</span> Dedicated PM</li>
         </ul>
-        <a href="#contact" class="block text-center mt-8 bg-white border-2 border-ink text-ink font-semibold py-3 rounded-lg hover:bg-ink hover:text-white transition">Talk to us</a>
+        <a href="#contact" class="mt-auto block text-center text-[14px] font-medium py-3 rounded-full border border-ink/15 hover:border-ink transition">Talk to us</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ======== FAQ ======== -->
-<section class="py-24">
-  <div class="max-w-3xl mx-auto px-6">
-    <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight text-center mb-12">Frequently asked questions</h2>
-    <div class="space-y-3">
-      <details class="group bg-white border border-slate-200 rounded-xl p-5 cursor-pointer hover:border-slate-300 transition">
-        <summary class="font-semibold flex justify-between items-center list-none">
+<section class="py-28 md:py-36 bg-white border-y border-line">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-xs uppercase tracking-[0.2em] text-mute mb-6">07 — Frequently asked</div>
+    <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05] mb-16">Questions, answered.</h2>
+    <div class="border-y border-line">
+      <details class="group border-b border-line py-6 last:border-b-0">
+        <summary class="font-display text-xl flex justify-between items-baseline list-none cursor-pointer">
           How long until my site is live?
-          <span class="text-brand-600 group-open:rotate-45 transition">+</span>
+          <span class="text-mute text-sm group-open:rotate-45 transition">+</span>
         </summary>
-        <p class="mt-3 text-slate-600">Starter sites go live in 7 days. Growth sites in 14. Scale projects vary based on scope—we'll give you a firm date during the discovery call.</p>
+        <p class="mt-4 text-[15px] text-mute leading-relaxed max-w-2xl">Starter sites go live in 7 days, Growth in 14, Scale on a custom timeline confirmed during discovery.</p>
       </details>
-      <details class="group bg-white border border-slate-200 rounded-xl p-5 cursor-pointer hover:border-slate-300 transition">
-        <summary class="font-semibold flex justify-between items-center list-none">
+      <details class="group border-b border-line py-6 last:border-b-0">
+        <summary class="font-display text-xl flex justify-between items-baseline list-none cursor-pointer">
           Do I own the website when it's done?
-          <span class="text-brand-600 group-open:rotate-45 transition">+</span>
+          <span class="text-mute text-sm group-open:rotate-45 transition">+</span>
         </summary>
-        <p class="mt-3 text-slate-600">Yes—100%. The domain, the code, the content. You're never locked in.</p>
+        <p class="mt-4 text-[15px] text-mute leading-relaxed max-w-2xl">Yes — fully. Domain, code, and content all transfer to you. We never lock clients in.</p>
       </details>
-      <details class="group bg-white border border-slate-200 rounded-xl p-5 cursor-pointer hover:border-slate-300 transition">
-        <summary class="font-semibold flex justify-between items-center list-none">
+      <details class="group border-b border-line py-6 last:border-b-0">
+        <summary class="font-display text-xl flex justify-between items-baseline list-none cursor-pointer">
           What if I don't have any content or photos?
-          <span class="text-brand-600 group-open:rotate-45 transition">+</span>
+          <span class="text-mute text-sm group-open:rotate-45 transition">+</span>
         </summary>
-        <p class="mt-3 text-slate-600">No problem. We write the copy and source professional stock imagery. Custom photography is available as an add-on.</p>
+        <p class="mt-4 text-[15px] text-mute leading-relaxed max-w-2xl">We write the copy and source professional imagery as part of the build. Custom photography is available as an add-on.</p>
       </details>
-      <details class="group bg-white border border-slate-200 rounded-xl p-5 cursor-pointer hover:border-slate-300 transition">
-        <summary class="font-semibold flex justify-between items-center list-none">
+      <details class="group border-b border-line py-6 last:border-b-0">
+        <summary class="font-display text-xl flex justify-between items-baseline list-none cursor-pointer">
           Can you redesign an existing site?
-          <span class="text-brand-600 group-open:rotate-45 transition">+</span>
+          <span class="text-mute text-sm group-open:rotate-45 transition">+</span>
         </summary>
-        <p class="mt-3 text-slate-600">Absolutely. We'll audit what's working, keep the SEO equity, and rebuild the rest from scratch.</p>
+        <p class="mt-4 text-[15px] text-mute leading-relaxed max-w-2xl">Often. We start with an audit, preserve any SEO equity, and rebuild the rest from a clean slate.</p>
       </details>
-      <details class="group bg-white border border-slate-200 rounded-xl p-5 cursor-pointer hover:border-slate-300 transition">
-        <summary class="font-semibold flex justify-between items-center list-none">
-          What does the ROI report actually include?
-          <span class="text-brand-600 group-open:rotate-45 transition">+</span>
+      <details class="group border-b border-line py-6 last:border-b-0">
+        <summary class="font-display text-xl flex justify-between items-baseline list-none cursor-pointer">
+          What's in the monthly performance report?
+          <span class="text-mute text-sm group-open:rotate-45 transition">+</span>
         </summary>
-        <p class="mt-3 text-slate-600">A one-page PDF every month: leads received, where traffic came from, top-performing pages, estimated revenue based on your close rate and customer value, and a recommendation for next month.</p>
+        <p class="mt-4 text-[15px] text-mute leading-relaxed max-w-2xl">A single-page summary: leads, traffic sources, top pages, estimated revenue based on your close rate and customer value, and one recommended improvement for the next month.</p>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ======== CONTACT ======== -->
-<section id="contact" class="py-24 bg-gradient-to-b from-white to-brand-50">
-  <div class="max-w-5xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-12 items-start">
-      <div>
-        <div class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Get in touch</div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">Tell us about your project.</h2>
-        <p class="mt-4 text-lg text-slate-600">Fill out the form and we'll get back within one business day with a free, no-pressure quote.</p>
-        <div class="mt-10 space-y-5 text-slate-700">
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 grid place-items-center text-brand-600 shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
-            </div>
-            <div>
-              <div class="font-semibold">Email</div>
-              <a href="mailto:hello@lighthousestudio.co" class="text-brand-600 hover:underline">hello@lighthousestudio.co</a>
-            </div>
+<section id="contact" class="py-28 md:py-36">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <div class="text-xs uppercase tracking-[0.2em] text-mute mb-3">08 — Contact</div>
+        <h2 class="font-display text-4xl md:text-5xl tracking-tight font-medium leading-[1.05]">
+          Tell us about your project.
+        </h2>
+        <p class="mt-6 text-lg text-mute leading-relaxed max-w-md">
+          Fill out the form and we'll reply within one business day with a fixed-price quote and a clear next step.
+        </p>
+        <div class="mt-12 space-y-6 text-[14px]">
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute mb-1">Email</div>
+            <a href="mailto:hello@lighthousestudio.co" class="hover:underline">hello@lighthousestudio.co</a>
           </div>
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 grid place-items-center text-brand-600 shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div>
-              <div class="font-semibold">Call or text</div>
-              <a href="tel:+15555550199" class="text-brand-600 hover:underline">(555) 555-0199</a>
-            </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute mb-1">Phone</div>
+            <a href="tel:+15555550199" class="hover:underline">(555) 555-0199</a>
           </div>
-          <div class="flex gap-4 items-start">
-            <div class="w-10 h-10 rounded-lg bg-brand-50 grid place-items-center text-brand-600 shrink-0">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div>
-              <div class="font-semibold">Reply time</div>
-              <div>Within 1 business day, guaranteed.</div>
-            </div>
+          <div>
+            <div class="text-xs uppercase tracking-[0.15em] text-mute mb-1">Reply time</div>
+            <div>Within 1 business day</div>
           </div>
         </div>
       </div>
 
-      <form id="leadForm" class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 space-y-5">
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Your name</label>
-          <input required name="name" type="text" placeholder="Jane Doe" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
-        </div>
-        <div class="grid grid-cols-2 gap-4">
+      <div class="md:col-span-7">
+        <form id="leadForm" class="border border-line bg-white p-8 lg:p-10 space-y-6">
           <div>
-            <label class="block text-sm font-semibold mb-1.5">Email</label>
-            <input required name="email" type="email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
+            <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Your name</label>
+            <input required name="name" type="text" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/15 focus:border-ink focus:ring-0 outline-none" />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Email</label>
+              <input required name="email" type="email" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/15 focus:border-ink focus:ring-0 outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Phone (optional)</label>
+              <input name="phone" type="tel" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/15 focus:border-ink focus:ring-0 outline-none" />
+            </div>
           </div>
           <div>
-            <label class="block text-sm font-semibold mb-1.5">Phone</label>
-            <input name="phone" type="tel" placeholder="(optional)" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
+            <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Business name</label>
+            <input name="business" type="text" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/15 focus:border-ink focus:ring-0 outline-none" />
           </div>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Business name</label>
-          <input name="business" type="text" placeholder="Acme Co." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition" />
-        </div>
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Which package fits?</label>
-          <select name="package" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition bg-white">
-            <option>Not sure yet</option>
-            <option>Starter — $1,500</option>
-            <option>Growth — $3,200</option>
-            <option>Scale — $6,500+</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold mb-1.5">Tell us about your project</label>
-          <textarea name="message" rows="4" placeholder="What kind of business? What do you need the site to do?" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 outline-none transition"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-ink text-white font-semibold py-3.5 rounded-lg hover:bg-brand-700 transition flex items-center justify-center gap-2">
-          Send my request
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-        <p id="formStatus" class="text-sm text-center text-slate-500 hidden"></p>
-        <p class="text-xs text-slate-400 text-center">By submitting, you agree we may email or call you about your project. We never sell your info.</p>
-      </form>
+          <div>
+            <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Which package fits</label>
+            <select name="package" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/15 focus:border-ink focus:ring-0 outline-none">
+              <option>Not sure yet</option>
+              <option>Starter — $1,500</option>
+              <option>Growth — $3,200</option>
+              <option>Scale — $6,500+</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-[0.15em] text-mute mb-2">Tell us about your project</label>
+            <textarea name="message" rows="4" class="w-full px-0 py-2 bg-transparent border-0 border-b border-ink/15 focus:border-ink focus:ring-0 outline-none resize-none"></textarea>
+          </div>
+          <button type="submit" class="bg-ink text-paper text-[14px] font-medium px-5 py-3 rounded-full hover:opacity-90 transition inline-flex items-center gap-2">
+            Send request
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p id="formStatus" class="text-sm text-mute hidden"></p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ======== FOOTER ======== -->
-<footer class="bg-ink text-slate-400 py-12">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
-    <div class="md:col-span-2">
-      <div class="flex items-center gap-2 font-display font-bold text-lg text-white">
-        <span class="inline-block w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 grid place-items-center">L</span>
-        Lighthouse Web Studio
+<footer class="border-t border-line py-12">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-8 items-end">
+    <div class="md:col-span-5">
+      <div class="flex items-center gap-2.5 text-[15px] font-semibold tracking-tight mb-3">
+        <span class="inline-block w-6 h-6 rounded-sm bg-ink"></span>
+        Lighthouse
       </div>
-      <p class="mt-3 max-w-md">Websites that bring small businesses real customers. Built fast, measured monthly, supported forever.</p>
+      <p class="text-[14px] text-mute max-w-sm leading-relaxed">A small studio designing websites for serious small businesses.</p>
     </div>
-    <div>
-      <div class="font-semibold text-white mb-3">Studio</div>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#services" class="hover:text-white">Services</a></li>
-        <li><a href="#process" class="hover:text-white">Process</a></li>
-        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
-        <li><a href="admin.html" class="hover:text-white">Lead inbox</a></li>
+    <div class="md:col-span-3">
+      <div class="text-xs uppercase tracking-[0.15em] text-mute mb-3">Studio</div>
+      <ul class="space-y-2 text-[14px]">
+        <li><a href="#services" class="hover:opacity-70">Services</a></li>
+        <li><a href="#work" class="hover:opacity-70">Work</a></li>
+        <li><a href="#pricing" class="hover:opacity-70">Pricing</a></li>
+        <li><a href="admin.html" class="hover:opacity-70">Lead inbox</a></li>
       </ul>
     </div>
-    <div>
-      <div class="font-semibold text-white mb-3">Contact</div>
-      <ul class="space-y-2 text-sm">
-        <li><a href="mailto:hello@lighthousestudio.co" class="hover:text-white">hello@lighthousestudio.co</a></li>
-        <li><a href="tel:+15555550199" class="hover:text-white">(555) 555-0199</a></li>
+    <div class="md:col-span-4">
+      <div class="text-xs uppercase tracking-[0.15em] text-mute mb-3">Contact</div>
+      <ul class="space-y-2 text-[14px]">
+        <li><a href="mailto:hello@lighthousestudio.co" class="hover:opacity-70">hello@lighthousestudio.co</a></li>
+        <li><a href="tel:+15555550199" class="hover:opacity-70">(555) 555-0199</a></li>
       </ul>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-white/10 text-xs flex flex-wrap justify-between gap-4">
-    <div>© <span id="year"></span> Lighthouse Web Studio. All rights reserved.</div>
-    <div>Built by us, for us. <a href="#" class="hover:text-white">Privacy</a> · <a href="#" class="hover:text-white">Terms</a></div>
+  <div class="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-line text-xs text-mute flex flex-wrap justify-between gap-4">
+    <div>© <span id="year"></span> Lighthouse. All rights reserved.</div>
+    <div><a href="#" class="hover:text-ink">Privacy</a> · <a href="#" class="hover:text-ink">Terms</a></div>
   </div>
 </footer>
 
